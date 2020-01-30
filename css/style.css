@@ -1,0 +1,723 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
+
+*, *:before, *:after {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+
+
+
+body
+{
+  overflow-x: hidden;
+   
+}
+
+/*loader*/
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: black;
+  
+}
+.eye{
+  width: 20px; height: 8px;
+  background-color: rgba(240,220,220,1);
+  border-radius:0px 0px 20px 20px;
+  position: relative;
+  left: 10px; top: 40px;
+  box-shadow:  40px 0px 0px 0px rgba(240,220,220,1);              
+}
+
+.head{
+  -webkit-backface-visibility: hidden;
+  position: relative;
+  margin: -250px auto;
+  width: 80px; height: 80px;
+  background-color: #111;
+  border-radius:50px;
+  box-shadow: inset -4px 2px 0px 0px rgba(240,220,220,1);
+  -webkit-animation:headAnim 1.5s infinite alternate;
+  -webkit-animation-timing-function:ease-out;
+}
+
+.body{ 
+  position: relative;
+  margin: 90px auto;
+  width: 140px; height: 120px;
+  background-color: #111;
+  border-radius: 50px/25px ;
+  box-shadow: inset -5px 2px 0px 0px rgba(240,220,220,1);
+  -webkit-animation:bodyAnim 1.5s infinite alternate;
+  -webkit-animation-timing-function:ease-out;  
+}
+
+  @-webkit-keyframes headAnim{
+         0%{ top:0px; }
+         50%{ top:10px; }
+         100% { top:0px;} 
+  }
+
+  @-webkit-keyframes bodyAnim{
+         0%{ top:-5px; }
+         50%{ top:10px; }
+         100% { top:-5px;} 
+  }
+
+.circ{
+  -webkit-backface-visibility: hidden;
+  margin: 60px auto;
+  width: 180px; height: 180px;
+  background-color: #111;
+  border-radius: 0px 0px 50px 50px;
+  position: relative;
+  z-index: -1;  
+  left: 0%; top: 20%;
+  overflow: hidden;
+}
+
+.hands{
+  -webkit-backface-visibility: hidden;
+  margin-top: 140px;
+  width: 120px;height: 120px;
+  position: absolute;
+  background-color: #111;
+  border-radius:20px;
+  box-shadow:-1px -4px 0px 0px rgba(240,220,220,1);
+  -webkit-transform:rotate(45deg);
+  top:75%;left: 16%;
+  z-index: 1;
+  -webkit-animation:bodyAnim 1.5s infinite alternate;
+  -webkit-animation-timing-function:ease-out;
+}
+
+.load{  
+  position: absolute;
+  width: 7ch; height: 32px;
+  text-align: left;
+  line-height: 32px;
+  margin: -10px auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size:28px;
+  font-weight:400;
+  color:rgba(240,220,220,1);
+  left: 2%; top: 5%;
+  -webkit-animation:fontAnim 3.75s infinite;
+  -webkit-animation-timing-function:ease-out;
+  word-wrap: break-word;
+  display:block;
+  overflow: hidden;
+}
+
+  @-webkit-keyframes fontAnim{
+        0%{ width:7ch; }
+       16%{ width:8ch; }
+       32%{ width:9ch; }
+       48%{ width:10ch; }
+       64%{ width:11ch; }
+       80%{ width:12ch; }
+     100% { width:13ch;} 
+  }
+
+
+
+
+
+
+/*fin estilos cuerpo pagina*/
+
+
+/*inicio menu*/
+.menu {
+  list-style: none;
+  line-height: 46px;
+  /*outline: 1px solid red;*/
+  padding-left: 0;
+  margin: 2em auto;
+  width: 15em;
+  
+}
+
+.menu a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  background: url(http://www.migueldeharo.com/repositorio/men_v/sp-menu-responsive.png) no-repeat top left;
+  padding-left: 3em;
+  }
+
+.menu a:hover {
+  margin-left: 1em;
+  --webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.menu li {
+  /*outline:  1px solid green;*/
+  box-shadow: 3px 0  rgb(17, 128, 233) inset;
+  padding-left: .8em;
+  margin-bottom: 3px;
+  --webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.menu li:hover {
+  box-shadow: 15em 0 rgb(0, 162, 255) inset;
+
+}
+
+.menu li a:hover {
+  color: white;
+
+}
+
+.menu li:nth-child(2) a {
+  background-position: 0 -46px;
+}
+
+.menu li:nth-child(3) a {
+  background-position: 0 -92px;
+}
+
+.menu li:nth-child(4) a {
+  background-position: 0 -138px;
+}
+
+.menu li:nth-child(5) a {
+  background-position: 0 -184px;
+}
+
+.menu li:last-child a {
+  background-position: 0 -230px;
+}
+/*fin menu*/
+
+
+/*posicion responsive menu*/
+
+nav {
+  background: rgb(255, 255, 255);
+  opacity: 0.9;
+  top: 0;
+  position: absolute;
+  left: -18em;
+  z-index: 20;
+  height: 100%;
+  padding-top: 3em;
+  transition: all 0.5s;
+  }
+
+nav.mostrar {
+  left: 0;
+
+}
+
+#mostrar-nav {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  z-index: 30;
+  width: 20px;
+  height: 20px;
+  background: url(http://www.procserve.com/wp-content/themes/procserve/images/mobile-menu-icon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+
+
+ .carousel {
+  display: block;
+
+  -webkit-transform: translateZ(0);
+  /*  for demo only */
+ 
+  width: 55%;
+  height: 200px;
+  min-width: 550px;
+  margin: auto;
+  font-size: 0;
+  background: #505456;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px #000;
+  /********************/
+  height: 200px;
+  -webkit-overflow-scrolling: touch;
+  /* for tablets */
+}
+.touch .carousel {
+  overflow: auto;
+}
+.carousel:before, .carousel:after {
+  content: '';
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 50px;
+  font-size: 80px;
+  line-height: 190px;
+  font-family: arial;
+  color: #555;
+  font-weight: bold;
+  pointer-events: none;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+.carousel:before {
+  content: '\2039';
+  left: 0;
+  text-align: left;
+  text-indent: -20px;
+  box-shadow: 50px 0 20px -20px #292B2C inset;
+}
+.carousel:after {
+  content: '\203A';
+  right: 0;
+  text-align: right;
+  text-indent: 40px;
+  box-shadow: -50px 0 20px -20px #292B2C inset;
+}
+.carousel.right:after, .carousel.left:before {
+  opacity: 1;
+}
+.carousel.right:after {
+  right: 0;
+  text-indent: 60px;
+}
+.carousel.left:before {
+  left: 0;
+  text-indent: -40px;
+}
+.carousel > a {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  color: #CCC;
+  font-size: 1.5em;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+.carousel > a:hover {
+  color: #FFF;
+}
+.carousel > a.prev {
+  left: -20px;
+}
+.carousel > a.next {
+  right: -20px;
+}
+.carousel > .indicator {
+  pointer-events: none;
+  position: absolute;
+  z-index: 4;
+  bottom: 0;
+  left: 0;
+  background: #D82B6A;
+  height: 4px;
+  border-radius: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s, bottom 0.2s;
+  transition: opacity 0.2s, bottom 0.2s;
+}
+.carousel:hover > .indicator {
+  opacity: 1;
+  bottom: -10px;
+}
+.carousel > .wrap {
+  overflow: hidden;
+  border-radius: 5px;
+}
+.carousel > .wrap > ul {
+  list-style: none;
+  white-space: nowrap;
+  height: 200px;
+}
+.carousel > .wrap > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  margin: 0 0 0 5px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+}
+.carousel > .wrap > ul > li:first-child {
+  margin: 0;
+}
+.carousel > .wrap > ul > li > img {
+  display: block;
+  height: 100%;
+  margin: auto;
+  vertical-align: bottom;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+
+.typewriter h1 {
+ top: 200%;
+  text-align: right;
+  z-index: 50;
+  color: rgb(255, 255, 255);
+  text-shadow: -5px -5px 3px #000;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(12, 198, 255); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+  
+}
+
+
+.type img {
+
+  
+    margin: -42px;
+    margin-top: 0%;
+    padding: -100px;
+ 
+margin-left: 5%;
+  width: 50%;
+  height: 70%;
+
+
+
+  
+}
+
+img{
+  z-index: 50;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+  
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(0, 140, 255) }
+  
+}
+
+header {
+  border-radius: 2em;
+  background: transparent url("https://c.wallhere.com/photos/a0/44/processor_cpu_upgrade_installation_chip_robot-783986.jpg!d") no-repeat scroll center center / cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*.shape {
+  
+  background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 100%),
+  linear-gradient(127deg, rgba(236, 62, 129, 0.8), rgba(218, 89, 164, 0) 100%),
+  linear-gradient(336deg, rgba(192, 0, 26, 0.8), rgba(245, 103, 103, 0) 100%);
+  animation: morph 8s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  height:300px;
+  transition: all 1s ease-in-out;
+  width: 400px;
+  z-index: 5;
+}
+
+@keyframes morph {
+  0% {
+			border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+			background:linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 100%),
+      linear-gradient(127deg, rgba(236, 62, 129, 0.8), rgba(218, 89, 164, 0) 100%),
+      linear-gradient(336deg, rgba(192, 0, 26, 0.8), rgba(245, 103, 103, 0) 100%);
+	} 
+	
+	50% {
+			border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+			background:linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 100%),
+      linear-gradient(127deg, rgba(236, 62, 129, 0.8), rgba(218, 89, 164, 0) 100%),
+      linear-gradient(336deg, rgba(192, 0, 26, 0.8), rgba(245, 103, 103, 0) 100%);
+	}
+  
+	100% {
+		border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+		background:linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 100%),
+    linear-gradient(127deg, rgba(236, 62, 129, 0.8), rgba(218, 89, 164, 0) 100%),
+    linear-gradient(336deg, rgba(192, 0, 26, 0.8), rgba(245, 103, 103, 0) 100%);
+	} 
+}
+
+.scene {
+  position: absolute;
+  height: 100%;
+  background: url("https://i.pinimg.com/originals/97/40/7e/97407ee411c162c895178f4131272c40.jpg") 50% 50% fixed;
+  padding: 20rem;
+  text-align: center;
+  z-index: 0;
+}
+
+
+
+/*.magic {
+ 
+  position: absolute;
+  top: calc(50% - 10rem);
+  left: calc(50% - 10rem);
+  width: 60rem;
+  height: 60rem;
+  background: url("https://i.pinimg.com/originals/97/40/7e/97407ee411c162c895178f4131272c40.jpg") 50% 50% no-repeat fixed;
+  background-size: cover;
+  border-radius: 80%;
+  z-index: 5;
+}
+*/
+/*.check-out {
+  z-index: 1;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 2rem;
+  color: #fff;
+  font-family: test;
+}
+.check-out a {
+  color: #ffaaaa;
+}
+
+
+/*terminal
+@keyframes blink {
+  0%,
+  49% {
+    border-right-color: transparent;
+  }
+  50%,
+  100% {
+    border-right-color: currentColor;
+  }
+}
+@keyframes scan {
+  0% {
+    background-position: 0 -100vh;
+  }
+  35%,
+  100% {
+    background-position: 0 100vh;
+  }
+}
+
+output {
+  border-radius: 1em;
+  background-color: rgb(0, 0, 0);
+  background-image: radial-gradient(ellipse 500% 100% at 50% 90%, transparent, rgb(12, 152, 170));
+  background-position: center;
+  display: block;
+  
+  padding: 2em;
+  box-shadow: inset 0 0 10em 1em rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  font-family: monospace;
+  color: rgb(255, 255, 255);
+  position: relative;
+}
+output::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-image: linear-gradient(0deg, transparent 0%, rgba(8, 153, 211, 0.2) 2%, rgba(11, 119, 161, 0.8) 3%, rgba(36, 124, 160, 0.2) 3%, transparent 100%);
+  background-repeat: no-repeat;
+  animation: scan 7.5s linear 0s infinite;
+}
+output::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-image: radial-gradient(ellipse 50% 15% at 50% 15%, rgba(255, 255, 255, 0.05), transparent), radial-gradient(ellipse 50% 10% at 50% 12%, rgba(255, 255, 255, 0.1), transparent), radial-gradient(ellipse 50% 5% at 50% 10%, rgba(255, 255, 255, 0.1), transparent), radial-gradient(ellipse 50% 3% at 50% 9%, rgba(255, 255, 255, 0.1), transparent), radial-gradient(ellipse 200% 20% at 50% 0%, rgba(0, 0, 0, 0.5), transparent), linear-gradient(0deg, rgba(0, 0, 0, 0.2) 50%, transparent 50%);
+  background-size: 100%, 100%, 100%, 100%, 100%, 100% 0.25ch;
+}
+output q {
+  border-right: 0 solid currentColor;
+  animation: blink 500ms linear 0s infinite;
+  text-shadow: 0 0 1ex rgb(26, 221, 255), 0 0 2px rgba(255, 255, 255, 0.8);
+  margin-bottom: 1em;
+  line-height: 150%;
+}
+output q::before {
+  content: "> ";
+}
+output q:last-child {
+  border-right-width: 1ch;
+}
+*/
+/*typing effect*/
+header .container {
+  padding-top: 1px;
+  padding-bottom: 50px;
+  
+}
+
+
+.slogan {
+  width: 0;
+  top:50%;
+  left: 50%;
+  white-space: nowrap;
+  margin: 0 auto;
+  padding: 2px 0 0;
+  letter-spacing: 2px;
+  text-align: center;
+  font: bold 300% Consolas, Monaco, monospace;
+  color: #ffffff;
+  border: #ffffff;
+  font-size: 32px;
+  font-weight: 300;
+  border-right: 6px solid #0b5acf;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  -webkit-animation-name: blink-start, typing, blink-end;
+  -moz-animation-name: blink-start, typing, blink-end;
+  animation-name: blink-start, typing, blink-end;
+  -webkit-animation-duration: 1s, 1s, 1s;
+  -moz-animation-duration: 1s, 1s, 1s;
+  animation-duration: 1s, 1s, 1s;
+  -webkit-animation-timing-function: linear, steps(13, end), linear;
+  -moz-animation-timing-function: linear, steps(13, end), linear;
+  animation-timing-function: linear, steps(13, end), linear;
+  -webkit-animation-iteration-count: 1, 1, infinite;
+  -moz-animation-iteration-count: 1, 1, infinite;
+  animation-iteration-count: 1, 1, infinite;
+  -webkit-animation-delay: 0s, 1s, 2s;
+  -moz-animation-delay: 0s, 1s, 2s;
+  animation-delay: 0s, 1s, 2s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.slogan span {
+  display: block;
+  width: 20%;
+  
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+@-moz-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 45%px;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 72%;
+  }
+}
+@-webkit-keyframes blink-start {
+  from, to {
+    border-color: #27ae60;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+@-moz-keyframes blink-start {
+  from, to {
+    border-color: #27ae60;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes blink-start {
+  from, to {
+    border-color: #27ae60;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink-end {
+  from, to {
+    border-color: #27ae60;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+@-moz-keyframes blink-end {
+  from, to {
+    border-color: #27ae60;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes blink-end {
+  from, to {
+    border-color: #27ae60;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
