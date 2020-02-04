@@ -225,7 +225,7 @@ z-index: 20;
 
 nav.mostrar {
   left: 0;
-position: fixed;
+position: absolute;
 }
 
 #mostrar-nav {
