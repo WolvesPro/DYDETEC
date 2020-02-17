@@ -215,9 +215,8 @@ nav {
   position:fixed;
   opacity: 0.9;
   top: 0;
-  position: absolute;
   left: -18em;
-z-index: 20;
+  z-index: 20;
   height: 100%;
   padding-top: 3em;
   transition: all 0.5s;
@@ -225,12 +224,11 @@ z-index: 20;
 
 nav.mostrar {
   left: 0;
-position: absolute;
+  position: fixed;
 }
 
 #mostrar-nav {
-
-  position:relative;
+position : absolute;
   top: 2em;
   left: 2em;
   z-index: 30;
@@ -270,51 +268,7 @@ position: absolute;
   
   }
 
-  section.awSlider .carousel{
-    display:table;
-    z-index:2;
-   
-  }
   
-  section.awSlider{
-    margin:30px auto;
-    padding:30px;
-    position:relative;
-    display:table;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  section.awSlider:hover > img{
-    -ms-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    opacity:1;
-  }
-  
-  section.awSlider img{
-     pointer-events: none;
-  }
-  
-  section.awSlider > img{
-    position:absolute;
-    top:30px;
-    z-index:1;
-    transition:all .3s;
-    filter: blur(1.8vw);
-    -webkit-filter: blur(2vw);
-    -moz-filter: blur(2vw); 
-    -o-filter: blur(2vw); 
-    -ms-filter: blur(2vw);
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    opacity:.5;
-  }
 
 .typewriter h1 {
 
@@ -341,8 +295,7 @@ position: absolute;
     margin: -42px;
     margin-top: 0%;
     padding: -100px;
- 
-margin-left: 5%;
+    margin-left: 5%;
   width: 50%;
   height: 70%;
 
@@ -371,7 +324,7 @@ margin-left: 5%;
 header {
   border-radius: 2em;
   
-  background: transparent url("https://c.wallhere.com/photos/a0/44/processor_cpu_upgrade_installation_chip_robot-783986.jpg!d") no-repeat scroll center center / cover;
+  background: transparent url("https://c.wallhere.com/photos/a0/44/processor_cpu_upgrade_installation_chip_robot-783986.jpg!d") no-repeat fixed center center / cover;
 }
 
 
@@ -380,167 +333,11 @@ header {
 
 
 
-
-
-
-
-
-/*.shape {
-  
-  background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 100%),
-  linear-gradient(127deg, rgba(236, 62, 129, 0.8), rgba(218, 89, 164, 0) 100%),
-  linear-gradient(336deg, rgba(192, 0, 26, 0.8), rgba(245, 103, 103, 0) 100%);
-  animation: morph 8s ease-in-out infinite;
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  height:300px;
-  transition: all 1s ease-in-out;
-  width: 400px;
-  z-index: 5;
-}
-
-@keyframes morph {
-  0% {
-			border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
-			background:linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 100%),
-      linear-gradient(127deg, rgba(236, 62, 129, 0.8), rgba(218, 89, 164, 0) 100%),
-      linear-gradient(336deg, rgba(192, 0, 26, 0.8), rgba(245, 103, 103, 0) 100%);
-	} 
-	
-	50% {
-			border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
-			background:linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 100%),
-      linear-gradient(127deg, rgba(236, 62, 129, 0.8), rgba(218, 89, 164, 0) 100%),
-      linear-gradient(336deg, rgba(192, 0, 26, 0.8), rgba(245, 103, 103, 0) 100%);
-	}
-  
-	100% {
-		border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
-		background:linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 100%),
-    linear-gradient(127deg, rgba(236, 62, 129, 0.8), rgba(218, 89, 164, 0) 100%),
-    linear-gradient(336deg, rgba(192, 0, 26, 0.8), rgba(245, 103, 103, 0) 100%);
-	} 
-}
-
-.scene {
-  position: absolute;
-  height: 100%;
-  background: url("https://i.pinimg.com/originals/97/40/7e/97407ee411c162c895178f4131272c40.jpg") 50% 50% fixed;
-  padding: 20rem;
-  text-align: center;
-  z-index: 0;
-}
-
-
-
-/*.magic {
- 
-  position: absolute;
-  top: calc(50% - 10rem);
-  left: calc(50% - 10rem);
-  width: 60rem;
-  height: 60rem;
-  background: url("https://i.pinimg.com/originals/97/40/7e/97407ee411c162c895178f4131272c40.jpg") 50% 50% no-repeat fixed;
-  background-size: cover;
-  border-radius: 80%;
-  z-index: 5;
-}
-*/
-/*.check-out {
-  z-index: 1;
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  font-size: 2rem;
-  color: #fff;
-  font-family: test;
-}
-.check-out a {
-  color: #ffaaaa;
-}
-
-
-/*terminal
-@keyframes blink {
-  0%,
-  49% {
-    border-right-color: transparent;
-  }
-  50%,
-  100% {
-    border-right-color: currentColor;
-  }
-}
-@keyframes scan {
-  0% {
-    background-position: 0 -100vh;
-  }
-  35%,
-  100% {
-    background-position: 0 100vh;
-  }
-}
-
-output {
-  border-radius: 1em;
-  background-color: rgb(0, 0, 0);
-  background-image: radial-gradient(ellipse 500% 100% at 50% 90%, transparent, rgb(12, 152, 170));
-  background-position: center;
-  display: block;
-  
-  padding: 2em;
-  box-shadow: inset 0 0 10em 1em rgba(0, 0, 0, 0.5);
-  overflow: auto;
-  font-family: monospace;
-  color: rgb(255, 255, 255);
-  position: relative;
-}
-output::before {
-  position: absolute;
-  content: "";
-  display: block;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  background-image: linear-gradient(0deg, transparent 0%, rgba(8, 153, 211, 0.2) 2%, rgba(11, 119, 161, 0.8) 3%, rgba(36, 124, 160, 0.2) 3%, transparent 100%);
-  background-repeat: no-repeat;
-  animation: scan 7.5s linear 0s infinite;
-}
-output::after {
-  position: absolute;
-  content: "";
-  display: block;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  background-image: radial-gradient(ellipse 50% 15% at 50% 15%, rgba(255, 255, 255, 0.05), transparent), radial-gradient(ellipse 50% 10% at 50% 12%, rgba(255, 255, 255, 0.1), transparent), radial-gradient(ellipse 50% 5% at 50% 10%, rgba(255, 255, 255, 0.1), transparent), radial-gradient(ellipse 50% 3% at 50% 9%, rgba(255, 255, 255, 0.1), transparent), radial-gradient(ellipse 200% 20% at 50% 0%, rgba(0, 0, 0, 0.5), transparent), linear-gradient(0deg, rgba(0, 0, 0, 0.2) 50%, transparent 50%);
-  background-size: 100%, 100%, 100%, 100%, 100%, 100% 0.25ch;
-}
-output q {
-  border-right: 0 solid currentColor;
-  animation: blink 500ms linear 0s infinite;
-  text-shadow: 0 0 1ex rgb(26, 221, 255), 0 0 2px rgba(255, 255, 255, 0.8);
-  margin-bottom: 1em;
-  line-height: 150%;
-}
-output q::before {
-  content: "> ";
-}
 output q:last-child {
   border-right-width: 1ch;
 }
 */
 /*typing effect*/
-header .container {
-  padding-top: 1px;
-  padding-bottom: 50px;
-  
-}
 
 
 .slogan {
