@@ -16,7 +16,7 @@
 
 body
 {
-  background: rgb(124, 131, 134);
+  background: rgb(0, 0, 0);
 }
 
 /*loader*/
@@ -214,17 +214,19 @@ nav {
   background: rgb(255, 255, 255);
   position:fixed;
   opacity: 0.9;
-  top: 0;
+  top: 10;
   left: -18em;
   z-index: 20;
   height: 100%;
-  padding-top: 3em;
+ 
   transition: all 0.5s;
   }
 
 nav.mostrar {
   left: 0;
+
   position: fixed;
+  background-attachment: scroll;
 }
 
 #mostrar-nav {
@@ -455,3 +457,9 @@ output q:last-child {
     border-color: transparent;
   }
 }
+
+
+
+/* bodyyy */
+
+
