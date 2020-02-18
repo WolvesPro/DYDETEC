@@ -10,6 +10,10 @@ h6 {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
+h3{
+  color: rgb(255, 255, 255);
+}
+
 
 .topnav {
     font-size: 16px;
@@ -42,6 +46,13 @@ color: #000;
 .lead {
     font-size: 18px;
     font-weight: 400;
+    color: rgb(123,167, 188);
+}
+.lead2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(123,167, 188);
+  float: right;
 }
 /*top background*/
 .intro-header { 
@@ -53,8 +64,8 @@ color: #000;
     height:1000px;
 }
 .bg-overlay {
-  background:rgba(255, 255, 255, 0.3);
-  height: 855px;
+  background:rgba(25, 71, 197, 0.3);
+  height: 885px;
 }
 
 .intro-message {
@@ -136,13 +147,16 @@ hr.intro-divider {
 /*section 2*/
 .content-section-a {
     padding: 50px 0;
-    background: url('https://68.media.tumblr.com/eb2382a5a4c996cfdab27bc0d1eb51ff/tumblr_nt5umxS1FY1ud7rr3o1_540.jpg') no-repeat center center fixed;
+    background: url('img/Electronica.jpg') no-repeat fixed;
     background-size: cover;
     height: 855px;
+   
 }
+
+
 .bg-overlay2 {
   margin-top: -50px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(255, 255, 255);
   height: 855px;
 }
   /*self-taught*/
@@ -169,28 +183,34 @@ hr.intro-divider {
 }
 
 h2.section-heading {
-    margin-top: 100px;
-    font-size: 3em;
-    color: rgba(0, 0, 0, 0.9);
+    margin-top: 220px;
+    font-size: 4.5em;
+    color: rgb(242, 0, 77);
+   border: #000;
+
+  
 }
 
+h2.section-heading2 {
+  margin-top: 220px;
+  font-size: 4.5em;
+  color: rgb(242, 0, 77);
+ border: #000;
+float: right;
+
+}
   /*text*/
  .content-section-a p {
     font-size: 22px;
    font-weight: bold;
-    color: #000;
+   color: rgb(123,167, 188);
   }
 .content-section-a p a {
   color: silver;
   font-weight: bold;
 }
 /*profile picture*/
-.img-circle {
-  margin-top: 150px;
-  border: 1px outset rgba(255, 255, 255, 0.3);
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
-  
-}
+
 
 
 /* Portfolio section*/
